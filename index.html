@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Quiz Reto Baile Fit | 30 Días</title>
+  <meta name="description" content="Descubre tu recomendación personalizada de baile fitness en casa para mujeres de 40+ años.">
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings) & Inter (UI/Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              pink: '#F72585',       // Rosa principal
+              pinkSoft: '#FFF0F6',   // Rosa suave
+              pinkHover: '#E01676',
+              purple: '#65227C',     // Roxo elegante
+              purpleDark: '#4A155C',
+              lavender: '#F3E8FF',   // Lavanda
+              coral: '#FF8A80',      // Coral suave
+              canvas: '#FFFFFF',     // Fundo branco
+              canvasSubtle: '#FAFAFC',
+              textMain: '#292333',   // Texto principal
+              textMuted: '#77717F',  // Texto secundário
+              border: '#EFE8F0',     // Borda suave
+              borderHover: '#E2D6E4'
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          },
+          boxShadow: {
+            'card-subtle': '0 2px 14px -2px rgba(101, 34, 124, 0.05)',
+            'card-hover': '0 6px 20px -2px rgba(101, 34, 124, 0.08)',
+            'btn-pink': '0 6px 20px -2px rgba(247, 37, 133, 0.28)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FFF9FB;
+      color: #292333;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .custom-scale-press {
+      transition: transform 0.12s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .custom-scale-press:active {
+      transform: scale(0.975);
+    }
+    .fade-enter {
+      animation: fadeIn 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .pulse-cta {
+      animation: ctaPulse 2.4s infinite ease-in-out;
+    }
+    @keyframes ctaPulse {
+      0%, 100% {
+        box-shadow: 0 8px 24px -2px rgba(247, 37, 133, 0.42);
+        transform: translateY(0);
+      }
+      50% {
+        box-shadow: 0 14px 32px 0px rgba(247, 37, 133, 0.62);
+        transform: translateY(-1px);
+      }
+      /* Natural Fluid Rhythmic Ribbon Wave Animations */
+    .ribbon-wave-1 {
+      animation: ribbonDrift1 14s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+    @keyframes ribbonDrift1 {
+      0% { transform: translateY(0px) rotate(0deg) scale(1); }
+      50% { transform: translateY(-8px) rotate(0.8deg) scale(1.01); }
+      100% { transform: translateY(4px) rotate(-0.5deg) scale(0.99); }
+    }
+    .ribbon-wave-2 {
+      animation: ribbonDrift2 18s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+    @keyframes ribbonDrift2 {
+      0% { transform: translateY(0px) rotate(0deg) scale(1); }
+      50% { transform: translateY(10px) rotate(-1deg) scale(1.015); }
+      100% { transform: translateY(-6px) rotate(0.6deg) scale(0.985); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fade-enter, .pulse-cta, .ribbon-wave-1, .ribbon-wave-2, .animate-spin {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
+  </style>
+</head>
+<body class="relative min-h-screen flex flex-col items-center justify-start antialiased bg-white selection:bg-brand-pink selection:text-white">
+
+  <!-- Ambient Natural Movement Background (Fluid Rhythmic Dance Ribbons & Harmonic Glows) -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0 select-none" aria-hidden="true">
+    
+    <!-- Top & Side Soft Warm Ambient Glows -->
+    <div class="absolute -top-32 -left-28 w-96 h-96 rounded-full bg-gradient-to-br from-pink-200/35 via-rose-100/15 to-transparent blur-3xl"></div>
+    <div class="absolute top-1/4 -right-28 w-88 h-88 rounded-full bg-gradient-to-bl from-purple-200/25 via-pink-100/15 to-transparent blur-3xl"></div>
+    <div class="absolute -bottom-24 -left-20 w-80 h-80 rounded-full bg-gradient-to-tr from-pink-200/25 via-amber-100/10 to-transparent blur-3xl"></div>
+
+    <!-- Fluid Silk Ribbons / Dynamic Dance Waves (Full SVG viewport scaling) -->
+    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Primary Vibrant Silk Ribbon Gradient (Brand Pink to Radiant Coral) -->
+        <linearGradient id="silkRibbon1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#F72585" stop-opacity="0.16"/>
+          <stop offset="45%" stop-color="#FF5C8D" stop-opacity="0.10"/>
+          <stop offset="75%" stop-color="#FF7043" stop-opacity="0.08"/>
+          <stop offset="100%" stop-color="#FFA8C5" stop-opacity="0.02"/>
+        </linearGradient>
+
+        <!-- Secondary Lavender-Plum Fluid Wave Gradient -->
+        <linearGradient id="silkRibbon2" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#65227C" stop-opacity="0.12"/>
+          <stop offset="40%" stop-color="#9C27B0" stop-opacity="0.07"/>
+          <stop offset="70%" stop-color="#F72585" stop-opacity="0.09"/>
+          <stop offset="100%" stop-color="#FFF0F5" stop-opacity="0.02"/>
+        </linearGradient>
+
+        <!-- Delicate Luminous Edge Highlight Gradients -->
+        <linearGradient id="ribbonEdge1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#F72585" stop-opacity="0.32"/>
+          <stop offset="50%" stop-color="#FF8A80" stop-opacity="0.40"/>
+          <stop offset="100%" stop-color="#65227C" stop-opacity="0.10"/>
+        </linearGradient>
+
+        <linearGradient id="ribbonEdge2" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop offset="0%" stop-color="#BA68C8" stop-opacity="0.28"/>
+          <stop offset="60%" stop-color="#F72585" stop-opacity="0.32"/>
+          <stop offset="100%" stop-color="#FFA8CD" stop-opacity="0.08"/>
+        </linearGradient>
+
+        <!-- Bottom Ambient Rhythmic Ribbon (Bottom Wave) -->
+        <linearGradient id="bottomRibbonGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#F72585" stop-opacity="0.13"/>
+          <stop offset="50%" stop-color="#FF80AB" stop-opacity="0.07"/>
+          <stop offset="100%" stop-color="#E0AAFF" stop-opacity="0.02"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Background Ribbon 2: Fluid Purple/Lavender Harmonic Wave -->
+      <g class="ribbon-wave-2">
+        <path d="M-100,250 C280,180 420,480 820,380 C1180,290 1320,520 1560,420 L1560,780 C1340,860 1100,680 760,760 C420,840 180,680 -100,740 Z" fill="url(#silkRibbon2)"/>
+        <!-- Fine glowing contour line -->
+        <path d="M-100,250 C280,180 420,480 820,380 C1180,290 1320,520 1560,420" stroke="url(#ribbonEdge2)" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+
+      <!-- Foreground Ribbon 1: Dynamic Mexican Magenta/Coral Silk Streamer -->
+      <g class="ribbon-wave-1">
+        <path d="M-120,420 C180,320 380,620 740,540 C1080,460 1260,680 1580,580 L1580,950 C1280,1020 980,820 620,900 C260,980 80,840 -120,890 Z" fill="url(#silkRibbon1)"/>
+        <!-- Fine glowing contour line -->
+        <path d="M-120,420 C180,320 380,620 740,540 C1080,460 1260,680 1580,580" stroke="url(#ribbonEdge1)" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
+
+      <!-- Bottom Fluid Ribbon Accent (Framing the bottom naturally) -->
+      <path d="M-80,820 C240,760 520,880 880,810 C1200,750 1380,850 1540,820 L1540,920 L-80,920 Z" fill="url(#bottomRibbonGrad)"/>
+      <path d="M-80,820 C240,760 520,880 880,810 C1200,750 1380,850 1540,820" stroke="url(#ribbonEdge1)" stroke-width="1.2" opacity="0.4"/>
+    </svg>
+  </div>
+
+  <!-- Minimalist High-End Header (Apple/Notion Glassmorphism with Delicate Border) -->
+  <header class="w-full bg-white/90 backdrop-blur-md border-b border-pink-100/70 sticky top-0 z-30 flex flex-col items-center shadow-[0_1px_8px_rgba(101,34,124,0.03)]">
+    <div class="relative w-full max-w-[480px] px-4 py-1.5 flex items-center justify-between min-h-[64px] sm:min-h-[72px]">
+      
+      <!-- Back Button Left Column -->
+      <div class="w-20 sm:w-24 flex justify-start z-10">
+        <button 
+          id="btn-back" 
+          type="button" 
+          aria-label="Volver a la pregunta anterior"
+          class="h-8 sm:h-9 px-2.5 sm:px-3 rounded-full border border-pink-200/80 hover:border-brand-pink text-brand-purple hover:text-brand-pink text-xs font-semibold flex items-center gap-1.5 transition opacity-0 pointer-events-none custom-scale-press bg-white/90 shadow-2xs"
+        >
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+          <span>VOLVER</span>
+        </button>
+      </div>
+
+      <!-- Center Official Logo (Mathematically Centered & Enlarged) -->
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+        <img 
+          src="images/logo.jpg" 
+          onerror="if(this.src.indexOf('images/')!==-1){this.src='logo.jpg';}else{this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.classList.remove('hidden');}"
+          alt="Reto Baile FIT" 
+          class="h-[56px] sm:h-[64px] w-auto object-contain transition-transform hover:scale-105"
+        />
+        <div class="hidden flex items-center gap-1.5 py-1 px-3 rounded-full bg-pink-50/90 border border-pink-200/80 text-brand-purple font-heading font-extrabold text-xs tracking-wide shadow-2xs">
+          <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span>
+          <span>RETO BAILE <span class="text-brand-pink">FIT</span></span>
+        </div>
+      </div>
+
+      <!-- Right Step Badge / Counter -->
+      <div class="w-20 sm:w-24 flex justify-end z-10">
+        <div id="header-counter" class="text-[11px] font-bold text-brand-purple px-2.5 py-1 rounded-full bg-brand-pinkSoft/90 border border-pink-200/70 shadow-2xs text-center min-w-[62px]">
+          <span class="text-brand-pink font-extrabold" id="header-curr-step">1</span><span class="text-brand-textMuted font-normal"> / 15</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fine Radiant Progress Bar with Glow -->
+    <div id="progress-wrapper" class="w-full max-w-[480px] px-4 pb-2.5">
+      <div class="flex items-center justify-between text-[11px] font-medium text-brand-textMuted mb-1.5">
+        <span class="font-semibold text-brand-textMain flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-pink inline-block"></span>
+          Tu progreso
+        </span>
+        <span id="progress-text" class="text-brand-pink font-bold">7%</span>
+      </div>
+      <div class="w-full bg-brand-lavender/60 h-2 rounded-full overflow-hidden p-0.5 border border-pink-100/60">
+        <div id="progress-bar" class="h-full rounded-full transition-all duration-300 ease-out bg-gradient-to-r from-brand-pink via-[#FF6584] to-brand-coral shadow-[0_0_8px_rgba(247,37,133,0.45)]" style="width: 7%;"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Quiz Container (Mobile-First Safe Area Max 480px) -->
+  <main class="w-full max-w-[480px] px-4 pt-3.5 pb-16 flex flex-col items-center relative z-10" style="padding-bottom: max(env(safe-area-inset-bottom, 20px), 36px);">
+
+    <!-- Screen Mount Point -->
+    <div id="screen-container" class="w-full flex flex-col items-center">
+      <!-- Injected by JavaScript -->
+    </div>
+
+    <!-- Security & Confidentiality Footer Card -->
+    <div id="security-badge" class="w-full mt-7 px-4 py-3 bg-white/90 backdrop-blur-sm rounded-2xl border border-pink-100/90 shadow-card-subtle flex items-center gap-3 text-left">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-pinkSoft to-brand-lavender text-brand-purple flex items-center justify-center shrink-0 border border-pink-100">
+        <svg class="w-4 h-4 text-brand-pink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold text-brand-textMain leading-tight flex items-center gap-1.5">
+          <span>100% seguro y confidencial</span>
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+        </h4>
+        <p class="text-[11px] text-brand-textMuted leading-snug mt-0.5">
+          Tus respuestas se procesan de forma privada para adaptar tu experiencia.
+        </p>
+      </div>
+    </div>
+
+    <footer class="text-[11px] text-brand-textMuted text-center mt-4 leading-relaxed">
+      Reto Baile Fit — 30 Días • Especial para mujeres de 40+ años en México
+    </footer>
+
+  </main>
+
+  <!-- Script Engine & Design System -->
+  <script>
+    // --- Safe Analytics (Strict Privacy: Never send sensitive weight/health data) ---
+    const Analytics = {
+      track: function(eventName, data = {}) {
+        const clean = { ...data };
+        delete clean.peso_actual;
+        delete clean.peso_deseado;
+        delete clean.altura;
+        delete clean.peso;
+        delete clean.molestias;
+        console.log(`[Analytics: ${eventName}]`, clean);
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: eventName, ...clean });
+      }
+    };
+
+    // --- Exclusive Vector SVG Icon Library (15 Mandatory Brand Icons + Utilities) ---
+    const Icons = {
+      // 1. Dance: Dancing woman movement silhouette
+      dance: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="13" cy="4" r="2"/>
+          <path d="M12 6c-1 3-3 4-6 4"/>
+          <path d="M14 6c2 1 4 2 6 2"/>
+          <path d="M13 8c-.5 3-1 5-2 8l-3 4"/>
+          <path d="M11 16l4 4"/>
+          <path d="M10 11c1.5 2 3.5 2 5 0"/>
+        </svg>
+      `,
+      // 2. Heart: Wellness & self-care
+      heart: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+        </svg>
+      `,
+      // 3. Flame: Energy & vitality
+      flame: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+        </svg>
+      `,
+      // 4. Calendar: 30-day program
+      calendar: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="18" height="18" x="3" y="4" rx="3"/>
+          <path d="M16 2v4M8 2v4M3 10h18"/>
+          <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+        </svg>
+      `,
+      // 5. Clock: Workout timer & session time
+      clock: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+      `,
+      // 6. Scale: Weight measurement
+      scale: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+          <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+          <path d="M7 21h10"/>
+          <path d="M12 3v18"/>
+          <path d="M3 7h18"/>
+        </svg>
+      `,
+      // 7. Ruler: Height measurement
+      ruler: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"/>
+          <path d="m14.5 3.5 2 2M11.5 6.5 14.5 9.5M8.5 9.5 10.5 11.5M5.5 12.5 8.5 15.5"/>
+        </svg>
+      `,
+      // 8. Target: Objective & goals
+      target: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <circle cx="12" cy="12" r="6"/>
+          <circle cx="12" cy="12" r="2"/>
+        </svg>
+      `,
+      // 9. Water: Hydration
+      water: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+        </svg>
+      `,
+      // 10. Shoe: Sneaker & movement
+      shoe: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 17a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3l-4-3-4 1-3-2H4a1 1 0 0 0-1 1v4Z"/>
+          <path d="M7 12V9a2 2 0 0 1 2-2h2"/>
+          <path d="M3 16h18"/>
+        </svg>
+      `,
+      // 11. Star: Achievement & confidence
+      star: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      `,
+      // 12. Shield: Safety & protection
+      shield: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      `,
+      // 13. Trend: Progress & improvement
+      trend: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+          <polyline points="16 7 22 7 22 13"/>
+        </svg>
+      `,
+      // 14. Home: Workout at home
+      home: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      `,
+      // 15. Medal: Completion & success
+      medal: (cls = "w-5 h-5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="6"/>
+          <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+        </svg>
+      `,
+      // Utilities: check, lock, bolt, arrowRight, sparkle, leaf
+      check: (cls = "w-3.5 h-3.5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      `,
+      lock: (cls = "w-3.5 h-3.5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+      `,
+      bolt: (cls = "w-3.5 h-3.5") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+        </svg>
+      `,
+      arrowRight: (cls = "w-4 h-4") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      `,
+      sparkle: (cls = "w-4 h-4") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+        </svg>
+      `,
+      leaf: (cls = "w-4 h-4") => `
+        <svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+        </svg>
+      `
+    };
+
+    // --- State Storage ---
+    const STORAGE_KEY = 'reto_baile_fit_15q_v3';
+
+    const defaultState = {
+      step: 1, // 1..15, 'processing', 'result'
+      answers: {
+        p1: '', p2: '', p3: '', p4: '', p5: '',
+        p6: '', p7: '', p8: '', p9: '', p10: '',
+        p11: '', p12: '', p13: '', p14: '', p15: ''
+      }
+    };
+
+    function loadState() {
+      try {
+        const s = localStorage.getItem(STORAGE_KEY);
+        if (s) {
+          const parsed = JSON.parse(s);
+          if (parsed && typeof parsed === 'object') {
+            const validStep = (typeof parsed.step === 'number' && parsed.step >= 1 && parsed.step <= 15) || parsed.step === 'processing' || parsed.step === 'result';
+            return {
+              step: validStep ? parsed.step : 1,
+              answers: { ...defaultState.answers, ...(parsed.answers || {}) }
+            };
+          }
+        }
+      } catch (e) {}
+      return { ...defaultState };
+    }
+
+    function saveState(s) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
+      } catch (e) {}
+    }
+
+    let state = loadState();
+
+    // The Exact 15 Questions with Semantic Icon Association
+    const questions = [
+      {
+        num: 1,
+        id: 'p1',
+        title: '¿Cuál es tu rango de edad?',
+        subtitle: 'Especialmente adaptado para mujeres en diferentes etapas.',
+        type: 'age-cards',
+        cards: [
+          {
+            label: '40 a 49 años',
+            value: '40 a 49 años',
+            img: 'images/mulher_40.png',
+            fallbackImg: 'mulher_40.png'
+          },
+          {
+            label: '50+ años',
+            value: '50+ años',
+            img: 'images/mulher_50.png',
+            fallbackImg: 'mulher_50.png'
+          }
+        ]
+      },
+      {
+        num: 2,
+        id: 'p2',
+        title: '¿Cuál es tu principal objetivo?',
+        subtitle: 'Elige tu mayor deseo al comenzar.',
+        type: 'radio',
+        options: [
+          { text: 'Controlar mi peso', icon: 'scale' },
+          { text: 'Sentirme con más energía', icon: 'flame' },
+          { text: 'Mejorar mi condición física', icon: 'trend' },
+          { text: 'Moverme más y sentirme mejor', icon: 'heart' }
+        ]
+      },
+      {
+        num: 3,
+        id: 'p3',
+        title: '¿Cómo describirías tu actividad física actual?',
+        subtitle: 'Sé sincera, no hay respuestas correctas ni incorrectas.',
+        type: 'radio',
+        options: [
+          { text: 'Casi no hago ejercicio', icon: 'home' },
+          { text: 'Me muevo ocasionalmente', icon: 'shoe' },
+          { text: 'Hago ejercicio 1 a 3 veces por semana', icon: 'calendar' },
+          { text: 'Soy bastante activa', icon: 'flame' }
+        ]
+      },
+      {
+        num: 4,
+        id: 'p4',
+        title: '¿Has practicado baile fitness antes?',
+        subtitle: 'Para conocer tu familiaridad con los pasos guiados.',
+        type: 'radio',
+        options: [
+          { text: 'Nunca', icon: 'dance' },
+          { text: 'Unas pocas veces', icon: 'dance' },
+          { text: 'Sí, de vez en cuando', icon: 'dance' },
+          { text: 'Sí, con frecuencia', icon: 'dance' }
+        ]
+      },
+      {
+        num: 5,
+        id: 'p5',
+        title: '¿Qué es lo que más te dificulta hacer ejercicio?',
+        subtitle: 'Identificar tu obstáculo nos ayuda a adaptar tu rutina.',
+        type: 'radio',
+        options: [
+          { text: 'Falta de tiempo', icon: 'clock' },
+          { text: 'Cansancio', icon: 'flame' },
+          { text: 'Falta de motivación', icon: 'heart' },
+          { text: 'No sé por dónde empezar', icon: 'target' }
+        ]
+      },
+      {
+        num: 6,
+        id: 'p6',
+        title: '¿Cuánto tiempo puedes dedicar a cada sesión?',
+        subtitle: 'Poco tiempo constante es más efectivo que horas de agotamiento.',
+        type: 'radio',
+        options: [
+          { text: '10 a 15 minutos', icon: 'clock' },
+          { text: '20 a 25 minutos', icon: 'clock' },
+          { text: '30 a 35 minutos', icon: 'clock' },
+          { text: '40 minutos o más', icon: 'clock' }
+        ]
+      },
+      {
+        num: 7,
+        id: 'p7',
+        title: '¿Cuántos días a la semana te gustaría entrenar?',
+        subtitle: 'La constancia amable crea resultados duraderos.',
+        type: 'radio',
+        options: [
+          { text: '2 a 3 días', icon: 'calendar' },
+          { text: '4 días', icon: 'calendar' },
+          { text: '5 días', icon: 'calendar' },
+          { text: '6 días, incluyendo sesiones suaves', icon: 'calendar' }
+        ]
+      },
+      {
+        num: 8,
+        id: 'p8',
+        title: '¿Cómo te sientes al subir escaleras o caminar rápido?',
+        subtitle: 'Nos ayuda a medir tu capacidad cardiovascular actual.',
+        type: 'radio',
+        options: [
+          { text: 'Me canso fácilmente', icon: 'shoe' },
+          { text: 'Me canso un poco', icon: 'shoe' },
+          { text: 'Lo hago sin mucha dificultad', icon: 'shoe' },
+          { text: 'Me siento muy cómoda', icon: 'flame' }
+        ]
+      },
+      {
+        num: 9,
+        id: 'p9',
+        title: '¿Tienes molestias o alguna condición que debamos considerar?',
+        subtitle: 'La salud de tus articulaciones y bienestar es prioridad.',
+        type: 'radio',
+        hasHealthNote: true,
+        options: [
+          { text: 'Molestias en rodillas o articulaciones', icon: 'shield' },
+          { text: 'Molestias en espalda o cadera', icon: 'shield' },
+          { text: 'Una condición médica o limitación física', icon: 'shield' },
+          { text: 'Ninguna de las anteriores', icon: 'heart' }
+        ]
+      },
+      {
+        num: 10,
+        id: 'p10',
+        title: '¿Qué tipo de entrenamiento prefieres?',
+        subtitle: 'Elige cómo te gusta más disfrutar del movimiento.',
+        type: 'radio',
+        options: [
+          { text: 'Baile suave y sin saltos', icon: 'heart' },
+          { text: 'Baile con movimientos moderados', icon: 'dance' },
+          { text: 'Rutinas variadas', icon: 'flame' },
+          { text: 'Me gustaría probar distintas intensidades', icon: 'star' }
+        ]
+      },
+      {
+        num: 11,
+        id: 'p11',
+        title: '¿Cómo describirías tus hábitos de descanso?',
+        subtitle: 'El descanso influye directamente en tu vitalidad.',
+        type: 'radio',
+        options: [
+          { text: 'Duermo menos de 6 horas', icon: 'clock' },
+          { text: 'Duermo entre 6 y 7 horas', icon: 'clock' },
+          { text: 'Duermo entre 7 y 9 horas', icon: 'heart' },
+          { text: 'Mis horarios cambian mucho', icon: 'calendar' }
+        ]
+      },
+      {
+        num: 12,
+        id: 'p12',
+        title: '¿Qué te motivaría a completar los 30 días?',
+        subtitle: 'Tu mayor fuente de inspiración y disfrute.',
+        type: 'radio',
+        options: [
+          { text: 'Sentirme más saludable', icon: 'heart' },
+          { text: 'Tener más energía', icon: 'flame' },
+          { text: 'Crear una rutina constante', icon: 'calendar' },
+          { text: 'Disfrutar del baile y ganar confianza', icon: 'star' }
+        ]
+      },
+      {
+        num: 13,
+        id: 'p13',
+        title: '¿Cuál es tu peso actual?',
+        subtitle: 'Este dato nos ayuda a conocer tu punto de partida. Es opcional.',
+        type: 'number',
+        unit: 'kg',
+        icon: 'scale',
+        placeholder: 'Ejemplo: 75 kg',
+        min: 30,
+        max: 250,
+        note: 'Bailar es para todos los cuerpos. Tu respuesta es libre y privada.'
+      },
+      {
+        num: 14,
+        id: 'p14',
+        title: '¿Cuánto mides?',
+        subtitle: 'Tu estatura nos ayuda a afinar tu guía. Es opcional.',
+        type: 'number',
+        unit: 'cm',
+        icon: 'ruler',
+        placeholder: 'Ejemplo: 160 cm',
+        min: 100,
+        max: 230,
+        note: 'Este dato es 100% libre y opcional.'
+      },
+      {
+        num: 15,
+        id: 'p15',
+        title: '¿A qué peso te gustaría llegar?',
+        subtitle: 'Tu meta deseada personal para estos 30 días. Es opcional.',
+        type: 'number',
+        unit: 'kg',
+        icon: 'target',
+        placeholder: 'Ejemplo: 68 kg',
+        min: 30,
+        max: 200,
+        note: 'Te mostraremos cómo avanzar con alegría y sin dietas restrictivas.'
+      }
+    ];
+
+    // Transparent Classification Logic (Bulletproof string coercion)
+    function computeClassification() {
+      const a = (state && state.answers) ? state.answers : {};
+      const getStr = (key, fallback = '') => {
+        const v = a[key];
+        if (!v) return fallback;
+        if (typeof v === 'string') return v;
+        if (typeof v === 'object') return v.value || v.label || v.text || fallback;
+        return String(v);
+      };
+
+      const act = getStr('p3');
+      const cansancio = getStr('p8');
+      const molestias = getStr('p9');
+      const pref = getStr('p10');
+
+      let nivel = 'Intermedio';
+      let badge = 'Nivel Moderado y Equilibrado';
+      let desc = 'Combinación ideal de movimientos divertidos, pasos sencillos y cadencia adecuada para ganar ritmo sin agotamiento.';
+
+      if (
+        act.includes('Casi no hago ejercicio') ||
+        cansancio.includes('Me canso fácilmente') ||
+        molestias.includes('rodillas o articulaciones') ||
+        molestias.includes('espalda o cadera') ||
+        molestias.includes('limitación física') ||
+        pref.includes('suave y sin saltos')
+      ) {
+        nivel = 'Principiante';
+        badge = 'Bajo Impacto • Paso a Paso';
+        desc = 'Rutinas amables y progresivas de bajo impacto, diseñadas para despertar tu cuerpo y cuidar tus articulaciones.';
+      } else if (
+        act.includes('bastante activa') &&
+        cansancio.includes('muy cómoda') &&
+        !molestias.includes('limitación')
+      ) {
+        nivel = 'Activa';
+        badge = 'Dinámico • Mayor Energía';
+        desc = 'Sesiones más dinámicas y variadas para mujeres que disfrutan de un ritmo vivo y activo en casa.';
+      }
+
+      const hasLimitation = molestias.includes('limitación') || molestias.includes('Molestias');
+      const p13Val = getStr('p13');
+      const p14Val = getStr('p14');
+      const p15Val = getStr('p15');
+
+      return {
+        nivel,
+        badge,
+        desc,
+        hasLimitation,
+        edad: getStr('p1', '40+ años'),
+        objetivo: getStr('p2', 'Moverme más y sentirme mejor'),
+        tiempo: getStr('p6', '15 a 20 minutos'),
+        dias: getStr('p7', '4 días a la semana'),
+        pesoActual: p13Val && p13Val !== 'No indicado' ? p13Val : null,
+        altura: p14Val && p14Val !== 'No indicado' ? p14Val : null,
+        pesoDeseado: p15Val && p15Val !== 'No indicado' ? p15Val : null
+      };
+    }
+
+    // DOM Elements
+    const screenContainer = document.getElementById('screen-container');
+    const progressWrapper = document.getElementById('progress-wrapper');
+    const progressBar = document.getElementById('progress-bar');
+    const progressText = document.getElementById('progress-text');
+    const headerCurrStep = document.getElementById('header-curr-step');
+    const headerCounter = document.getElementById('header-counter');
+    const btnBack = document.getElementById('btn-back');
+    const securityBadge = document.getElementById('security-badge');
+
+    btnBack.addEventListener('click', () => {
+      if (typeof state.step === 'number' && state.step > 1) {
+        state.step -= 1;
+        saveState(state);
+        render();
+      }
+    });
+
+    // Step Categories for Context & Polish
+    const stepCategories = [
+      'ETAPA & EDAD',
+      'TU OBJETIVO PRINCIPAL',
+      'ACTIVIDAD FÍSICA',
+      'EXPERIENCIA EN BAILE',
+      'TU MAYOR DESAFÍO',
+      'TIEMPO DISPONIBLE',
+      'FRECUENCIA SEMANAL',
+      'CONDICIÓN FÍSICA',
+      'SALUD ARTICULAR',
+      'ESTILO DE BAILE',
+      'HÁBITOS DE DESCANSO',
+      'TU MOTIVACIÓN',
+      'PUNTO DE PARTIDA',
+      'TU ESTATURA',
+      'TU META DESEADA'
+    ];
+
+    // --- Render Question (1 to 15) ---
+    function renderQuestion(idx) {
+      if (securityBadge) securityBadge.classList.remove('hidden');
+      const q = questions[idx - 1];
+      const pct = Math.round((idx / 15) * 100);
+
+      // Back Button state
+      if (idx > 1) {
+        btnBack.classList.remove('opacity-0', 'pointer-events-none');
+      } else {
+        btnBack.classList.add('opacity-0', 'pointer-events-none');
+      }
+
+      // Progress Bar
+      progressWrapper.classList.remove('hidden');
+      headerCounter.classList.remove('hidden');
+      progressBar.style.width = `${pct}%`;
+      progressText.textContent = `${pct}%`;
+      headerCurrStep.textContent = `${idx}`;
+
+      let inner = '';
+
+      if (q.type === 'age-cards') {
+        inner = `
+          <!-- Social Proof Badge: "+5,000 mujeres" with Live Indicator -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-pink-200/80 shadow-card-subtle text-xs mb-4">
+            <div class="flex -space-x-1.5 overflow-hidden">
+              <div class="w-6 h-6 rounded-full ring-2 ring-white overflow-hidden shadow-2xs">
+                <img src="${q.cards[0].img}" onerror="this.onerror=null; this.src='${q.cards[0].fallbackImg}';" class="w-full h-full object-cover">
+              </div>
+              <div class="w-6 h-6 rounded-full ring-2 ring-white overflow-hidden shadow-2xs">
+                <img src="${q.cards[1].img}" onerror="this.onerror=null; this.src='${q.cards[1].fallbackImg}';" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <span class="text-[11px] font-semibold text-brand-purple">
+              <strong class="text-brand-pink font-bold">+5,000 mujeres</strong> ya comenzaron su reto
+            </span>
+            <span class="relative flex h-2 w-2 ml-0.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+          </div>
+
+          <!-- Two Side-by-Side Visual Age Cards -->
+          <div class="grid grid-cols-2 gap-3.5 sm:gap-4 w-full max-w-sm">
+            ${q.cards.map((card) => {
+              const isSelected = state.answers[q.id] === card.value;
+              return `
+                <button 
+                  type="button" 
+                  data-option="${card.value}" 
+                  class="age-card-btn group w-full bg-white/95 backdrop-blur-sm rounded-3xl p-3.5 sm:p-4 border transition-all duration-200 flex flex-col items-center justify-between shadow-card-subtle hover:shadow-card-hover custom-scale-press ${
+                    isSelected 
+                      ? 'border-brand-pink ring-2 ring-brand-pink/25 bg-gradient-to-b from-brand-pinkSoft/90 to-white' 
+                      : 'border-pink-100 hover:border-brand-pink/50'
+                  }"
+                >
+                  <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-tr from-brand-pink via-[#FF8A80] to-brand-purple shadow-md mb-3 flex items-center justify-center">
+                    <img 
+                      src="${card.img}" 
+                      onerror="this.onerror=null; this.src='${card.fallbackImg}';"
+                      alt="${card.label}" 
+                      class="w-full h-full object-cover rounded-full shadow-2xs transition-transform group-hover:scale-105 duration-300"
+                    />
+                  </div>
+                  <div class="w-full py-2.5 px-2 rounded-xl bg-gradient-to-r from-brand-pink to-[#FF5E8E] text-white text-xs sm:text-sm font-bold text-center font-heading shadow-btn-pink transition">
+                    ${card.label}
+                  </div>
+                </button>
+              `;
+            }).join('')}
+          </div>
+
+          <!-- 60+ Option fallback with Delicate Pill Design -->
+          <button 
+            type="button" 
+            data-option="60 años o más" 
+            class="age-card-btn text-xs font-semibold px-4 py-2 rounded-full border border-pink-200/80 bg-white/80 hover:bg-brand-pinkSoft hover:text-brand-pink text-brand-purple transition mt-4 flex items-center gap-1.5 shadow-2xs custom-scale-press"
+          >
+            <span>¿Tienes 60 años o más? Toca aquí</span>
+            <span class="text-brand-pink font-bold">→</span>
+          </button>
+        `;
+      } else if (q.type === 'radio') {
+        inner = `
+          <div class="flex flex-col gap-2.5 w-full">
+            ${q.options.map((opt) => {
+              const optText = typeof opt === 'object' ? opt.text : opt;
+              const optIconKey = typeof opt === 'object' ? opt.icon : 'dance';
+              const iconSvg = Icons[optIconKey] ? Icons[optIconKey]('w-5 h-5') : Icons.dance('w-5 h-5');
+              const isSelected = state.answers[q.id] === optText;
+
+              return `
+                <button 
+                  type="button" 
+                  data-option="${optText.replace(/"/g, '&quot;')}" 
+                  class="radio-opt-btn group w-full min-h-[60px] p-3.5 sm:p-4 rounded-2xl text-left bg-white/95 backdrop-blur-sm border transition-all duration-200 flex items-center justify-between text-sm sm:text-[15px] font-medium custom-scale-press shadow-card-subtle hover:shadow-card-hover ${
+                    isSelected 
+                      ? 'border-brand-pink bg-gradient-to-r from-brand-pinkSoft/95 to-white text-brand-textMain ring-1 ring-brand-pink/30 shadow-[0_4px_16px_rgba(247,37,133,0.12)]' 
+                      : 'border-pink-100 hover:border-brand-pink/40 text-brand-textMain hover:bg-brand-canvasSubtle/70'
+                  }"
+                >
+                  <span class="flex items-center gap-3.5">
+                    <span class="w-10 h-10 rounded-2xl flex items-center justify-center transition-all duration-200 shrink-0 border ${
+                      isSelected 
+                        ? 'bg-gradient-to-tr from-brand-pink to-[#FF6584] text-white border-transparent shadow-sm' 
+                        : 'bg-gradient-to-br from-brand-pinkSoft/90 to-brand-lavender/50 text-brand-purple border-pink-100/70 group-hover:border-pink-200'
+                    }">
+                      ${iconSvg}
+                    </span>
+                    <span class="leading-snug text-brand-textMain font-semibold">${optText}</span>
+                  </span>
+
+                  <!-- Custom SVG Selection Indicator -->
+                  <span class="w-6 h-6 rounded-full flex items-center justify-center transition-all duration-200 shrink-0 ${
+                    isSelected 
+                      ? 'bg-gradient-to-tr from-brand-pink to-[#FF5E8E] text-white shadow-2xs scale-105' 
+                      : 'border-2 border-pink-200/80 bg-white/80 text-transparent group-hover:border-pink-300'
+                  }">
+                    ${Icons.check('w-3.5 h-3.5')}
+                  </span>
+                </button>
+              `;
+            }).join('')}
+          </div>
+
+          ${q.hasHealthNote ? `
+            <div id="health-notice" class="hidden mt-3.5 p-4 rounded-2xl bg-amber-50/90 border border-amber-200 text-amber-950 text-xs leading-relaxed">
+              <div class="flex items-start gap-2.5">
+                <div class="w-6 h-6 rounded-lg bg-amber-200/80 flex items-center justify-center text-amber-800 shrink-0 mt-0.5">
+                  ${Icons.shield('w-4 h-4')}
+                </div>
+                <div>
+                  <strong class="font-bold text-amber-900 block mb-0.5">Orientación de seguridad:</strong>
+                  <p>Nuestras rutinas se adaptan y no tienen impacto brusco. Si tienes una limitación física o dolor articular activo, te recomendamos consultar a un profesional de la salud antes de comenzar.</p>
+                </div>
+              </div>
+            </div>
+          ` : ''}
+        `;
+      } else if (q.type === 'number') {
+        const val = state.answers[q.id] || '';
+        const iconSvg = Icons[q.icon] ? Icons[q.icon]('w-6 h-6') : Icons.scale('w-6 h-6');
+
+        inner = `
+          <div class="w-full flex flex-col items-center">
+            <div class="w-full bg-white/95 backdrop-blur-sm p-6 rounded-3xl border border-pink-100 shadow-card-subtle flex flex-col gap-3.5">
+              
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-pinkSoft to-brand-lavender text-brand-pink flex items-center justify-center mx-auto border border-pink-100 shadow-2xs">
+                ${iconSvg}
+              </div>
+
+              <span class="text-xs font-bold text-brand-purple uppercase tracking-wider text-center">
+                Ingresa el valor (${q.unit})
+              </span>
+
+              <div class="relative flex items-center justify-center">
+                <input 
+                  type="text" 
+                  inputmode="decimal" 
+                  id="num-input" 
+                  value="${val}" 
+                  placeholder="${q.placeholder}" 
+                  class="w-full max-w-xs text-center text-3xl sm:text-4xl font-extrabold font-heading py-3.5 px-4 rounded-2xl border-2 border-pink-100 focus:border-brand-pink focus:outline-none focus:ring-4 focus:ring-brand-pink/15 text-brand-purple transition shadow-inner bg-brand-canvasSubtle/50"
+                  autofocus
+                />
+              </div>
+
+              <div id="num-error" class="text-xs text-rose-500 text-center font-medium min-h-[16px]"></div>
+
+              <p class="text-[11px] text-brand-textMuted text-center leading-relaxed">
+                ${q.note || ''}
+              </p>
+            </div>
+
+            <div class="w-full flex flex-col gap-2 mt-4">
+              <button 
+                id="btn-next-num" 
+                type="button" 
+                class="w-full min-h-[54px] py-4 px-6 rounded-2xl bg-gradient-to-r from-brand-pink via-[#F72585] to-[#FF5E8E] hover:opacity-95 text-white font-heading font-bold text-sm tracking-wide uppercase shadow-[0_8px_22px_rgba(247,37,133,0.32)] custom-scale-press transition flex items-center justify-center gap-2"
+              >
+                <span>CONTINUAR</span>
+                ${Icons.arrowRight('w-4 h-4')}
+              </button>
+              <button 
+                id="btn-skip-num" 
+                type="button" 
+                class="w-full py-2.5 text-xs font-semibold text-brand-textMuted hover:text-brand-pink transition"
+              >
+                Prefiero no indicarlo (Saltar) →
+              </button>
+            </div>
+          </div>
+        `;
+      }
+
+      screenContainer.innerHTML = `
+        <div class="fade-enter flex flex-col items-center w-full">
+          <!-- Question Category Tag -->
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-pinkSoft/90 border border-pink-200/70 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-brand-purple mb-2 shadow-2xs">
+            ${Icons.leaf('w-3.5 h-3.5 text-brand-pink')}
+            <span>${stepCategories[idx - 1] || 'Personalización'}</span>
+          </div>
+
+          <div class="w-full text-center mb-4">
+            <h2 class="text-xl sm:text-2xl font-extrabold text-brand-textMain leading-tight font-heading">
+              ${q.title}
+            </h2>
+            <p class="text-xs sm:text-[13px] text-brand-textMuted mt-1 leading-snug">
+              ${q.subtitle}
+            </p>
+          </div>
+          ${inner}
+        </div>
+      `;
+
+      // Event handlers
+      if (q.type === 'age-cards') {
+        const btns = screenContainer.querySelectorAll('.age-card-btn');
+        btns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const opt = btn.getAttribute('data-option');
+            state.answers[q.id] = opt;
+            saveState(state);
+            btns.forEach(b => b.classList.remove('border-brand-pink', 'ring-2', 'bg-brand-pinkSoft'));
+            btn.classList.add('border-brand-pink', 'ring-2', 'bg-brand-pinkSoft');
+            screenContainer.style.pointerEvents = 'none';
+            setTimeout(() => {
+              screenContainer.style.pointerEvents = 'auto';
+              advance(idx);
+            }, 260);
+          });
+        });
+      } else if (q.type === 'radio') {
+        const btns = screenContainer.querySelectorAll('.radio-opt-btn');
+        const healthNotice = document.getElementById('health-notice');
+
+        btns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const opt = btn.getAttribute('data-option');
+            state.answers[q.id] = opt;
+            saveState(state);
+
+            btns.forEach(b => b.classList.remove('border-brand-pink', 'bg-brand-pinkSoft', 'ring-1'));
+            btn.classList.add('border-brand-pink', 'bg-brand-pinkSoft', 'ring-1');
+
+            if (q.hasHealthNote && opt !== 'Ninguna de las anteriores') {
+              if (healthNotice) healthNotice.classList.remove('hidden');
+              screenContainer.style.pointerEvents = 'none';
+              setTimeout(() => {
+                screenContainer.style.pointerEvents = 'auto';
+                advance(idx);
+              }, 1800);
+            } else {
+              screenContainer.style.pointerEvents = 'none';
+              setTimeout(() => {
+                screenContainer.style.pointerEvents = 'auto';
+                advance(idx);
+              }, 260);
+            }
+          });
+        });
+      } else if (q.type === 'number') {
+        const inp = document.getElementById('num-input');
+        const err = document.getElementById('num-error');
+        const btnNext = document.getElementById('btn-next-num');
+        const btnSkip = document.getElementById('btn-skip-num');
+
+        const submitNumber = () => {
+          let raw = inp ? inp.value.trim().replace(',', '.').replace(/[^\d.]/g, '') : '';
+          
+          // If empty, do not block: treat as optional skip
+          if (!raw) {
+            state.answers[q.id] = 'No indicado';
+            saveState(state);
+            advance(idx);
+            return;
+          }
+
+          let val = parseFloat(raw);
+          if (isNaN(val)) {
+            state.answers[q.id] = 'No indicado';
+            saveState(state);
+            advance(idx);
+            return;
+          }
+
+          // Auto-convert meters to cm if user typed 1.60 instead of 160
+          if (q.unit === 'cm' && val >= 1.0 && val <= 2.5) {
+            val = Math.round(val * 100);
+          }
+
+          if (val < q.min || val > q.max) {
+            err.textContent = `Ingresa un valor aproximado entre ${q.min} y ${q.max} ${q.unit} (o pulsa saltar).`;
+            return;
+          }
+
+          state.answers[q.id] = `${val} ${q.unit}`;
+          saveState(state);
+          advance(idx);
+        };
+
+        if (btnNext) btnNext.addEventListener('click', submitNumber);
+        if (inp) {
+          inp.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              submitNumber();
+            }
+          });
+        }
+        if (btnSkip) {
+          btnSkip.addEventListener('click', () => {
+            state.answers[q.id] = 'No indicado';
+            saveState(state);
+            advance(idx);
+          });
+        }
+      }
+    }
+
+    function advance(currentIdx) {
+      Analytics.track('quiz_question_completed', { num: currentIdx });
+      if (currentIdx < 15) {
+        state.step = currentIdx + 1;
+        saveState(state);
+        render();
+      } else {
+        state.step = 'processing';
+        saveState(state);
+        Analytics.track('quiz_completed');
+        render();
+      }
+    }
+
+    // --- Screen: 3-Second Processing Screen ---
+    function renderProcessing() {
+      btnBack.classList.add('opacity-0', 'pointer-events-none');
+      progressWrapper.classList.add('hidden');
+      headerCounter.classList.add('hidden');
+      if (securityBadge) securityBadge.classList.add('hidden');
+
+      const messages = [
+        "Revisando tus preferencias de baile...",
+        "Identificando tu nivel de actividad física...",
+        "Adaptando rutinas amables para ti...",
+        "¡Tu recomendación personalizada está lista!"
+      ];
+
+      screenContainer.innerHTML = `
+        <div class="fade-enter flex flex-col items-center justify-center text-center py-10 px-2 w-full max-w-sm">
+          
+          <!-- Apple-Style Minimalist Dance Animation Medallion -->
+          <div class="relative w-32 h-32 mb-6 flex items-center justify-center">
+            <!-- Outer spinning gradient aura -->
+            <div class="absolute inset-0 rounded-full border-2 border-brand-lavender/80"></div>
+            <div class="absolute inset-0 rounded-full border-2 border-transparent border-t-brand-pink border-r-[#FF8A80] animate-spin"></div>
+            
+            <div class="absolute inset-2 rounded-full bg-gradient-to-br from-brand-pinkSoft via-white to-brand-lavender/40 flex items-center justify-center overflow-hidden p-2 shadow-inner border border-pink-100">
+              <svg class="w-16 h-16" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="dancerGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+                    <stop offset="0%" stop-color="#FF8A80"/>
+                    <stop offset="45%" stop-color="#F72585"/>
+                    <stop offset="100%" stop-color="#65227C"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- Energy sparkles -->
+                <path d="M78 18L79.5 22.5L84 24L79.5 25.5L78 30L76.5 25.5L72 24L76.5 22.5Z" fill="#FF8A80" opacity="0.85"/>
+                <path d="M22 28L23.2 31.5L27 32.5L23.2 33.5L22 37L20.8 33.5L17 32.5L20.8 31.5Z" fill="#F72585" opacity="0.8"/>
+
+                <!-- Left Arm arched overhead -->
+                <path d="M52 28 C45 24 37 18 36 12 C35.5 9 39 8.5 41 11 C43.5 15.5 50 23 54 28 Z" fill="url(#dancerGrad)"/>
+                <!-- Right Arm extended gracefully -->
+                <path d="M58 29 C67 31 77 33 82 37 C83.5 38.5 82 40 79.5 39 C74 36.5 66 34.5 58 32 Z" fill="url(#dancerGrad)"/>
+
+                <!-- Head & Hair bun with flower -->
+                <circle cx="56" cy="18" r="5" fill="url(#dancerGrad)"/>
+                <path d="M52.5 16 C48.5 13 47 17 49 20 C51 21.5 53.5 20.5 54 18.5 Z" fill="#65227C"/>
+                <circle cx="51" cy="15" r="2" fill="#FF8A80"/>
+
+                <!-- Torso in dynamic rhythmic posture -->
+                <path d="M54 23 C54 25.5 53 28 52 32 C50 37 52.5 43 55 47 C57 43 58 37 57 32 C57 28 56 25.5 56 23 Z" fill="url(#dancerGrad)"/>
+
+                <!-- Swirling Dance Skirt in full motion -->
+                <path d="M52 45 C44 49 32 55 23 64 C19 68 20.5 72.5 26 71.5 C36 69.5 46.5 66.5 52 64.5 C58 66.5 68.5 70.5 78.5 72.5 C83.5 73.5 85 69 81 65 C72.5 56 60 49 52 45 Z" fill="url(#dancerGrad)"/>
+                <path d="M29 67.5 C40 63.5 54 61.5 73 68.5 C67 62.5 57 56.5 52 52.5 C46.5 56.5 36.5 61.5 29 67.5 Z" fill="#FF8A80" opacity="0.6"/>
+
+                <!-- Dancing legs -->
+                <path d="M48 65 C47 72 45.5 80 44 87 C43.5 89.5 44.5 91 46 91 C47 91 48 89.5 49 86 C50.5 79 51.5 71 52 65 Z" fill="url(#dancerGrad)"/>
+                <path d="M55 64 C57.5 71.5 62 79 66.5 85 C68 87 70 87 70 85 C70 83 66.5 77.5 63 71 C60 66.5 57.5 64 55 64 Z" fill="url(#dancerGrad)"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-pinkSoft border border-pink-200/80 text-[11px] font-bold text-brand-purple mb-3 shadow-2xs">
+            ${Icons.sparkle('w-3.5 h-3.5 text-brand-pink')}
+            <span>PERSONALIZACIÓN INTELIGENTE</span>
+          </div>
+
+          <h2 class="text-xl sm:text-2xl font-extrabold text-brand-textMain leading-tight mb-2 font-heading">
+            ¡Estamos preparando tu recomendación!
+          </h2>
+
+          <p id="proc-msg" class="text-xs sm:text-sm font-semibold text-brand-pink min-h-[22px] transition-opacity duration-300 mb-5">
+            ${messages[0]}
+          </p>
+
+          <div class="w-full bg-brand-lavender/60 h-2.5 rounded-full overflow-hidden p-0.5 border border-pink-100 mb-6">
+            <div id="proc-bar" class="h-full rounded-full transition-all duration-700 ease-out bg-gradient-to-r from-brand-pink via-[#FF6584] to-brand-coral shadow-[0_0_10px_rgba(247,37,133,0.5)]" style="width: 25%;"></div>
+          </div>
+
+          <div class="flex items-center justify-center gap-2 text-[11px] text-brand-textMuted font-medium">
+            ${Icons.shield('w-3.5 h-3.5 text-brand-purple')}
+            <span>Adaptado especialmente para mujeres de 40+ años</span>
+          </div>
+        </div>
+      `;
+
+      const msgEl = document.getElementById('proc-msg');
+      const barEl = document.getElementById('proc-bar');
+
+      setTimeout(() => {
+        if (msgEl) msgEl.textContent = messages[1];
+        if (barEl) barEl.style.width = "50%";
+      }, 800);
+
+      setTimeout(() => {
+        if (msgEl) msgEl.textContent = messages[2];
+        if (barEl) barEl.style.width = "75%";
+      }, 1600);
+
+      setTimeout(() => {
+        if (msgEl) msgEl.textContent = messages[3];
+        if (barEl) barEl.style.width = "100%";
+      }, 2400);
+
+      setTimeout(() => {
+        state.step = 'result';
+        saveState(state);
+        Analytics.track('result_viewed');
+        render();
+      }, 3000);
+    }
+
+    // --- Screen: Results & Offer Screen ---
+    function renderResult() {
+      try {
+        btnBack.classList.add('opacity-0', 'pointer-events-none');
+        progressWrapper.classList.add('hidden');
+        headerCounter.classList.add('hidden');
+        if (securityBadge) securityBadge.classList.add('hidden');
+        screenContainer.style.pointerEvents = 'auto';
+
+        const data = computeClassification();
+
+        // Hotmart Checkout Link (Reto Baile Fit - 30 Días)
+        const checkoutBase = 'https://pay.hotmart.com/T108122997X';
+        const params = new URLSearchParams();
+        params.set('checkoutMode', '10');
+        params.set('src', 'quiz_reto_baile');
+        params.set('sck', 'quiz_reto_baile');
+        params.set('nivel', data.nivel);
+        params.set('tiempo', data.tiempo);
+
+        // Forward UTM and tracking parameters from current page URL if present
+        try {
+          const currentUrlParams = new URLSearchParams(window.location.search);
+          currentUrlParams.forEach((value, key) => {
+            if (key !== 'checkoutMode') {
+              params.set(key, value);
+            }
+          });
+        } catch (e) {
+          console.warn('Error reading URL parameters:', e);
+        }
+
+        const checkoutUrl = `${checkoutBase}?${params.toString()}`;
+
+        const edadStr = String(data.edad || '');
+        const userAvatar = (edadStr.includes('50') || edadStr.includes('60'))
+          ? 'images/mulher_50.png'
+          : 'images/mulher_40.png';
+
+      screenContainer.innerHTML = `
+        <div class="fade-enter flex flex-col items-center text-center w-full">
+          
+          <!-- Result Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-white/95 backdrop-blur-md border border-pink-200/90 text-brand-purple mb-3 shadow-card-subtle">
+            ${Icons.medal('w-4 h-4 text-brand-pink')}
+            <span>Tu recomendación personalizada está lista</span>
+            ${Icons.sparkle('w-3.5 h-3.5 text-amber-500')}
+          </div>
+
+          <!-- Titles from Specification -->
+          <h1 class="text-2xl sm:text-3xl font-extrabold font-heading text-brand-textMain leading-tight mb-2 tracking-tight">
+            ¡Tu nuevo comienzo está aquí!
+          </h1>
+          <p class="text-xs sm:text-sm text-brand-textMuted mb-6 leading-relaxed max-w-sm">
+            Descubre cómo empezar a moverte a tu propio ritmo con alegría y sin agotamiento.
+          </p>
+
+          <!-- Suggested Level Card (Apple/Notion Clean with Gradient Top Accent) -->
+          <div class="w-full bg-white/95 backdrop-blur-sm rounded-3xl border border-pink-100 shadow-card-subtle text-left mb-5 overflow-hidden">
+            <div class="h-1.5 w-full bg-gradient-to-r from-brand-pink via-brand-coral to-brand-purple"></div>
+            
+            <div class="p-5 sm:p-6">
+              <div class="flex items-center justify-between pb-3.5 border-b border-pink-100/80 mb-3.5">
+                <div>
+                  <span class="text-[10px] font-bold text-brand-textMuted uppercase tracking-wider block">Nivel Inicial Recomendado</span>
+                  <span class="text-xl font-extrabold font-heading text-brand-purple leading-tight">
+                    Nivel ${data.nivel}
+                  </span>
+                </div>
+                <span class="text-xs font-semibold bg-gradient-to-r from-brand-pinkSoft to-brand-lavender/50 text-brand-pink px-3.5 py-1.5 rounded-full border border-pink-200/70 shadow-2xs">
+                  ${data.badge}
+                </span>
+              </div>
+
+              <p class="text-xs sm:text-sm text-brand-textMain leading-relaxed mb-4">
+                ${data.desc}
+              </p>
+
+              <!-- Participant Answers Summary Cards -->
+              <div class="bg-brand-canvasSubtle/80 rounded-2xl p-4 space-y-2.5 text-xs border border-pink-100/70">
+                <div class="flex items-center justify-between">
+                  <span class="text-brand-textMuted flex items-center gap-1.5">
+                    ${Icons.heart('w-3.5 h-3.5 text-brand-pink')}
+                    <span>Rango de edad:</span>
+                  </span>
+                  <span class="inline-flex items-center gap-1.5">
+                    <img src="${userAvatar}" onerror="if(this.src.indexOf('images/')!==-1){this.src=this.src.replace('images/','');}else{this.style.display='none';}" class="w-5 h-5 rounded-full object-cover border border-pink-200 shadow-2xs">
+                    <strong class="text-brand-textMain font-semibold">${data.edad}</strong>
+                  </span>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <span class="text-brand-textMuted flex items-center gap-1.5">
+                    ${Icons.target('w-3.5 h-3.5 text-brand-purple')}
+                    <span>Objetivo principal:</span>
+                  </span>
+                  <strong class="text-brand-textMain font-semibold">${data.objetivo}</strong>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <span class="text-brand-textMuted flex items-center gap-1.5">
+                    ${Icons.clock('w-3.5 h-3.5 text-brand-pink')}
+                    <span>Tiempo por sesión:</span>
+                  </span>
+                  <strong class="text-brand-pink font-semibold">${data.tiempo}</strong>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <span class="text-brand-textMuted flex items-center gap-1.5">
+                    ${Icons.calendar('w-3.5 h-3.5 text-brand-purple')}
+                    <span>Frecuencia sugerida:</span>
+                  </span>
+                  <strong class="text-brand-textMain font-semibold">${data.dias}</strong>
+                </div>
+
+                ${(data.pesoActual || data.altura || data.pesoDeseado) ? `
+                  <div class="pt-2.5 border-t border-pink-100 text-[11px] text-brand-textMuted flex flex-col gap-1">
+                    <span class="font-semibold text-brand-textMain flex items-center gap-1">
+                      ${Icons.scale('w-3 h-3 text-brand-pink')}
+                      <span>Datos proporcionados:</span>
+                    </span>
+                    <span>${[
+                      data.pesoActual ? `Peso actual: ${data.pesoActual}` : null,
+                      data.altura ? `Estatura: ${data.altura}` : null,
+                      data.pesoDeseado ? `Meta deseada: ${data.pesoDeseado}` : null
+                    ].filter(Boolean).join(' • ')}</span>
+                  </div>
+                ` : ''}
+              </div>
+
+              ${data.hasLimitation ? `
+                <div class="mt-3.5 p-3.5 rounded-2xl bg-amber-50/90 border border-amber-200 text-amber-950 text-xs leading-relaxed flex items-start gap-2.5">
+                  <div class="w-5 h-5 rounded-md bg-amber-200/80 flex items-center justify-center text-amber-800 shrink-0 mt-0.5">
+                    ${Icons.shield('w-3.5 h-3.5')}
+                  </div>
+                  <div>
+                    <strong class="font-bold text-amber-900 block mb-0.5">Recomendación de seguridad:</strong>
+                    Al haber indicado molestias o limitaciones físicas, recomendamos adaptar siempre la intensidad a tu comodidad y contar con la orientación de un profesional de la salud antes de iniciar.
+                  </div>
+                </div>
+              ` : ''}
+            </div>
+          </div>
+
+          <!-- Offer Presentation Card (Clean Apple/Notion Aesthetic) -->
+          <div class="w-full bg-white/95 backdrop-blur-sm border border-pink-100 rounded-3xl p-5 sm:p-6 shadow-[0_6px_28px_rgba(101,34,124,0.06)] text-center relative overflow-hidden mb-4">
+            
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-gradient-to-r from-brand-lavender to-brand-pinkSoft text-brand-purple text-[10px] font-extrabold tracking-wider uppercase mb-3 border border-pink-200/60 shadow-2xs">
+              ${Icons.star('w-3 h-3 text-brand-pink')}
+              <span>PROGRAMA RECOMENDADO</span>
+            </span>
+
+            <h2 class="text-xl sm:text-2xl font-extrabold font-heading text-brand-textMain mb-2 leading-tight">
+              Tu próximo paso: Reto Baile Fit — 30 Días
+            </h2>
+
+            <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed mb-5">
+              Un programa práctico de baile fitness en casa, diseñado para mujeres de 40 años o más que desean moverse con confianza, mejorar su condición física y construir hábitos saludables.
+            </p>
+
+            <!-- Official Product Mockup Image -->
+            <div class="relative w-full max-w-[270px] sm:max-w-xs mx-auto mb-5 rounded-2xl overflow-hidden shadow-[0_12px_32px_rgba(101,34,124,0.12)] border border-pink-100 bg-white group min-h-[220px] flex items-center justify-center">
+              <img 
+                src="images/mockup_produto.jpg" 
+                onerror="if(this.src.indexOf('images/')!==-1){this.src='mockup_produto.jpg';}else{this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.classList.remove('hidden');}"
+                alt="Reto Baile Fit 30 Días" 
+                class="w-full h-auto object-cover transition-transform group-hover:scale-102 duration-300"
+              />
+              <div class="hidden p-6 w-full flex flex-col items-center justify-center text-center bg-gradient-to-br from-brand-pinkSoft via-white to-brand-lavender">
+                <div class="w-14 h-14 rounded-2xl bg-white shadow-card-subtle flex items-center justify-center text-brand-pink mb-3 border border-pink-100">
+                  ${Icons.dance('w-8 h-8')}
+                </div>
+                <span class="text-xs font-bold text-brand-purple uppercase tracking-wider">PROGRAMA COMPLETO</span>
+                <span class="text-lg font-heading font-extrabold text-brand-textMain mt-1">Reto Baile Fit — 30 Días</span>
+                <span class="inline-block mt-2 px-3 py-1 rounded-full bg-brand-pink text-white text-[11px] font-bold shadow-2xs">Acceso Digital Inmediato</span>
+              </div>
+            </div>
+
+            <!-- Program Highlights with Custom Check Badges -->
+            <div class="bg-brand-canvasSubtle/80 rounded-2xl p-4 text-left text-xs space-y-2.5 mb-5 border border-pink-100/70">
+              <div class="flex items-start gap-2.5">
+                <div class="w-4 h-4 rounded-full bg-brand-pinkSoft text-brand-pink flex items-center justify-center shrink-0 mt-0.5">
+                  ${Icons.check('w-2.5 h-2.5')}
+                </div>
+                <span class="text-brand-textMain leading-snug">30 días de entrenamiento organizado.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <div class="w-4 h-4 rounded-full bg-brand-pinkSoft text-brand-pink flex items-center justify-center shrink-0 mt-0.5">
+                  ${Icons.check('w-2.5 h-2.5')}
+                </div>
+                <span class="text-brand-textMain leading-snug">Rutinas progresivas y adaptables.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <div class="w-4 h-4 rounded-full bg-brand-pinkSoft text-brand-pink flex items-center justify-center shrink-0 mt-0.5">
+                  ${Icons.check('w-2.5 h-2.5')}
+                </div>
+                <span class="text-brand-textMain leading-snug">Ejercicios para realizar en casa sin aparatos.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <div class="w-4 h-4 rounded-full bg-brand-pinkSoft text-brand-pink flex items-center justify-center shrink-0 mt-0.5">
+                  ${Icons.check('w-2.5 h-2.5')}
+                </div>
+                <span class="text-brand-textMain leading-snug">Tutoriales paso a paso de referencia.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <div class="w-4 h-4 rounded-full bg-brand-pinkSoft text-brand-pink flex items-center justify-center shrink-0 mt-0.5">
+                  ${Icons.check('w-2.5 h-2.5')}
+                </div>
+                <span class="text-brand-textMain leading-snug">Calendario y seguimiento diario del progreso.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <div class="w-4 h-4 rounded-full bg-brand-pinkSoft text-brand-pink flex items-center justify-center shrink-0 mt-0.5">
+                  ${Icons.check('w-2.5 h-2.5')}
+                </div>
+                <span class="text-brand-textMain leading-snug">Guía digital en PDF descargable para imprimir.</span>
+              </div>
+            </div>
+
+            <!-- Price Card -->
+            <div class="mb-5 bg-gradient-to-br from-brand-pinkSoft via-white to-brand-pinkSoft/60 rounded-2xl py-3.5 px-4 border border-pink-200/80 shadow-2xs">
+              <span class="inline-block px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 text-[10px] font-extrabold uppercase tracking-wider mb-1">
+                OFERTA DE LANZAMIENTO • 75% OFF
+              </span>
+              <span class="text-xs text-brand-textMuted line-through block">Precio regular: $399 MXN</span>
+              <div class="flex items-center justify-center gap-1.5 mt-0.5">
+                <span class="text-xs font-bold text-brand-purple">Precio especial hoy:</span>
+                <span class="text-3xl sm:text-4xl font-extrabold font-heading text-brand-pink">$99 MXN</span>
+              </div>
+              <span class="text-[11px] text-brand-textMuted block mt-0.5 font-medium">
+                (Aprox. $5.50 USD • Pago único • Sin mensualidades)
+              </span>
+            </div>
+
+            <!-- Primary Action Button (Required Text: QUIERO COMENZAR MI RETO) -->
+            <a 
+              href="${checkoutUrl}" 
+              id="btn-main-offer" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-full min-h-[58px] py-4 px-6 rounded-2xl bg-gradient-to-r from-brand-pink via-[#F72585] to-[#FF5E8E] text-white font-heading font-extrabold text-base tracking-wide uppercase pulse-cta custom-scale-press transition-all flex items-center justify-center gap-2.5 shadow-[0_10px_28px_rgba(247,37,133,0.38)]"
+            >
+              <span>QUIERO COMENZAR MI RETO</span>
+              ${Icons.arrowRight('w-5 h-5')}
+            </a>
+
+            <!-- Guarantee Badges with Custom Icons -->
+            <div class="mt-4 flex items-center justify-center gap-4 sm:gap-6 text-[11px] text-brand-textMuted font-medium">
+              <span class="flex items-center gap-1.5">
+                ${Icons.lock('w-3.5 h-3.5 text-brand-purple')}
+                <span>Pago Seguro Hotmart</span>
+              </span>
+              <span class="flex items-center gap-1.5">
+                ${Icons.bolt('w-3.5 h-3.5 text-brand-pink')}
+                <span>Acceso Inmediato</span>
+              </span>
+              <span class="flex items-center gap-1.5">
+                ${Icons.shield('w-3.5 h-3.5 text-emerald-600')}
+                <span>Garantía 7 Días</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Restart Quiz Button -->
+          <button 
+            id="btn-restart" 
+            type="button" 
+            class="text-xs text-brand-textMuted hover:text-brand-pink underline py-2.5 transition font-medium"
+          >
+            Volver a realizar el cuestionario desde la pregunta 1
+          </button>
+
+        </div>
+      `;
+
+      const btnOffer = document.getElementById('btn-main-offer');
+      if (btnOffer) {
+        btnOffer.addEventListener('click', () => {
+          Analytics.track('sales_page_viewed', {
+            nivel: data.nivel,
+            tiempo: data.tiempo
+          });
+        });
+      }
+
+      const btnReset = document.getElementById('btn-restart');
+      if (btnReset) {
+        btnReset.addEventListener('click', () => {
+          state = { ...defaultState };
+          saveState(state);
+          render();
+        });
+      }
+    } catch (err) {
+      console.error('Error rendering result:', err);
+    }
+  }
+
+    // --- Main Router ---
+    function render() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      if (typeof state.step === 'number' && state.step >= 1 && state.step <= 15) {
+        renderQuestion(state.step);
+      } else if (state.step === 'processing') {
+        renderProcessing();
+      } else if (state.step === 'result') {
+        renderResult();
+      } else {
+        state.step = 1;
+        renderQuestion(1);
+      }
+    }
+
+    // Initialize App
+    render();
+  </script>
+</body>
+</html>
